@@ -1,22 +1,25 @@
-import Header from "./Header";
 import Headerz from "./Headerz";
-import Paragraph from "./Paragraph";
-import Square from "./Square";
-import People from "./People";
 import Pagination from "./Pagination";
 import Items from "./Items";
 import Main from "./Main";
 import React from "react";
+import './Main-page.css'
 
 const Stuff = () => {
     return (
       <React.Fragment>
-        <Main />
-        <Header />
-        <Paragraph />
-        <Square />
-        <People />
+      <div className="bigDiv">
+        <div>  
+            <Headerz />
+        </div>
+        <div>
+            <Main />
+            <Items />
+            <Pagination />
+        </div>
+      </div>  
       </React.Fragment>
+
     );
   };
   
