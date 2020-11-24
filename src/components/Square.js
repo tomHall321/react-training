@@ -1,5 +1,13 @@
-const Square = () => (
-    <div style={{background: "#f00", height: "200px", width: "200px",}} />
+const Square = ({ colour }) => (
+    <div style={{
+        background: colour,
+        width: "200px",
+        height: "200px",
+    }} />
 );
+
+Square.defaultProps = {
+    colour: "green",
+};
 
 export default Square;

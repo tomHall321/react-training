@@ -1,4 +1,5 @@
 import Stuff from "./components/Stuff";
+import Tricksy from "./components/Tricksy";
 import React from "react";
 
 const App = () => {

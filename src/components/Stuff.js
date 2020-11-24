@@ -2,17 +2,32 @@ import Header from "./Header";
 import Paragraph from "./Paragraph";
 import Square from "./Square";
 import People from "./People";
-import React from "react";
+import Basket from "./Basket";
+import FadeIn from "./FadeIn";
 
-const Stuff = () => {
-    return (
-      <React.Fragment>
-        <Header />
-        <Paragraph />
+const Stuff = ({ square }) => (
+    <>
+        <Header>Test, this is child of header</Header>
+        <Header/>
+        <Paragraph>Test, this is child of paragraph</Paragraph>
+        <Paragraph/>
         <Square />
-        <People />
-      </React.Fragment>
-    );
-  };
-  
-  export default Stuff;
+        { ! square ? (<Square colour="blue" />) : null }
+        <People names={ ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"] } />
+        <Basket items={ items } />
+        <FadeIn time="500ms">Hello</FadeIn>
+    </>
+);
+
+let items = [
+    { name: "Coffee", price: 2.10 },
+    { name: "Bananas", price: 3.50 },
+    { name: "Milk", price: 250.65 },
+    { name: "The Great Milk Shortage by Simon Schama", price: 12.99 },
+];
+
+Stuff.defaultProps = {
+    square: false,
+};
+
+export default Stuff;
