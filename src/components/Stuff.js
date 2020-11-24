@@ -6,16 +6,17 @@ import Basket from "./Basket";
 import FadeIn from "./FadeIn";
 
 const Stuff = ({ square }) => (
-    <>
+    <>   
+        <FadeIn time="500ms">
         <Header>Test, this is child of header</Header>
         <Header/>
         <Paragraph>Test, this is child of paragraph</Paragraph>
         <Paragraph/>
         <Square />
-        { ! square ? (<Square colour="blue" />) : null }
+        { square ? (<Square colour="blue" />) : null }
         <People names={ ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"] } />
         <Basket items={ items } />
-        <FadeIn time="500ms">Hello</FadeIn>
+        </FadeIn>
     </>
 );
 
@@ -27,7 +28,7 @@ let items = [
 ];
 
 Stuff.defaultProps = {
-    square: false,
+    square: true,
 };
 
 export default Stuff;

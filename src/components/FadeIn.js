@@ -1,13 +1,10 @@
-const FadeIn = ({time, children}) => (
-    <div style ={{
-        opacity:1,
-        transition: time,
-     }}>
-    <h1>{ children }</h1>
-    </div>      
-    
-);
+import './FadeIn.css'
 
+const FadeIn = ({children}) => (
+    
+    <div className="fade-in">{ children }</div>
+   
+);
 
 export default FadeIn;
 
