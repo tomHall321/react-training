@@ -5,7 +5,7 @@ import React from "react";
 const App = () => {
   return (
     <React.Fragment>
-      <Tricksy />
+      <Stuff />
     </React.Fragment>
   );
 };
