@@ -1,13 +1,37 @@
-const Square = ({ colour }) => (
-    <div style={{
-        background: colour,
-        width: "200px",
-        height: "200px",
-    }} />
-);
+import { Component } from "react";
 
-Square.defaultProps = {
-    colour: "green",
-};
+class Square extends Component 
+{   
+    constructor(props){
+        
+        super(props);
 
-export default Square;
+        this.state = {
+            isGreen : true          
+          };
+      
+          this.handleClick = this.handleClick.bind(this);
+        }
+      
+        handleClick() {
+          this.setState({
+            isGreen : !this.state.isGreen
+          });
+        }
+      
+        render() {
+          let {colour} = this.props;
+          return (
+            <div 
+            onClick={this.handleClick} 
+            style={{backgroundColor : this.state.isGreen ? "green" : colour, width: 200, height : 200}} />
+          );
+        }
+      }
+
+      Square.defaultProps = {
+        colour: "blue",
+    };
+
+      
+      export default Square;
