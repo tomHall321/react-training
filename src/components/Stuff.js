@@ -13,10 +13,14 @@ import RollCall from "./RollCall"
 import Colours from "./Colours"
 import Die from "./Die"
 import LameGame from "./LameGame"
+import GodCounter from "./GodCounter";
+import TwoCounters from "./TwoCounters";
 
 
 const Stuff = ({ square }) => (
     <>   
+        <TwoCounters/>
+        <GodCounter/>
         <LameGame aim={ 10 }/>
         <Colours colours={ [
             "#C14412",
