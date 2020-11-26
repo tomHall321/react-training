@@ -15,10 +15,19 @@ import Die from "./Die"
 import LameGame from "./LameGame"
 import GodCounter from "./GodCounter";
 import TwoCounters from "./TwoCounters";
-
+import Length from "./Length";
+import PasswordStrength from "./PasswordStrength";
+import TempConverter from "./TempConverter";
+import List from "./List";
+import Adder from "./Adder";
 
 const Stuff = ({ square }) => (
     <>   
+        <Adder/>
+        <List/>
+        <TempConverter/>
+        <PasswordStrength/>
+        <Length/>
         <TwoCounters/>
         <GodCounter/>
         <LameGame aim={ 10 }/>
